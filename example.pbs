@@ -2,7 +2,7 @@
 #PBS -N exampleScript
 #PBS -l nodes=1:ppn=2
 #PBS -l walltime=1:00
-#PBS -q defaultQ
+#PBS -q iiser
 #PBS -j oe
 #PBS -o gettingStarted.out
 #PBS -m abe
