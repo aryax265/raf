@@ -1,0 +1,11 @@
+#PBS -N exampleScript               # name of job
+#PBS -l nodes=1:ppn=2               # resources allocated, 1 node 2 processors
+#PBS -l walltime=15:00              # job will run at most 15 min
+#PBS -q force-6                     # job is submitted to force-6 queue
+#PBS -j oe                          # output and error is combined into the same file
+#PBS -o gettingStarted.out          # output file is named gettingStarted.out
+
+                                    # computation starts here
+cd $PBS_O_WORKDIR                   # changes into directory where script was submitted from
+
+echo "Started on `/bin/hostname`"   # prints name of compute node job was started on
